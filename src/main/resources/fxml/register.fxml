@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="parentContainer" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.test.RegisterController">
+   <children>
+      <VBox fx:id="mainVbox" prefHeight="900.0" prefWidth="1600.0">
+        <children>
+          <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="900.0" fitWidth="1600.0">
+                     <image>
+                        <Image url="@../images/register_background.jpg" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane prefHeight="900.0" prefWidth="641.0" style="-fx-background-color: rgba(255, 255,255, 1);">
+                     <children>
+                        <ImageView id="registerSceneLogo" fitHeight="129.0" fitWidth="129.0" layoutX="14.0" layoutY="14.0">
+                           <image>
+                              <Image url="@../images/logo.png" />
+                           </image>
+                        </ImageView>
+                        <Text id="registerSceneRegister" fill="#1797cf" layoutX="171.0" layoutY="247.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="register to the" textAlignment="CENTER" wrappingWidth="299.9999761581421">
+                           <effect>
+                              <DropShadow height="5.82" radius="0.9550000000000001" width="0.0" />
+                           </effect>
+                           <font>
+                              <Font name="Ubuntu" size="36.0" />
+                           </font>
+                        </Text>
+                        <JFXTextField fx:id="registerSceneUsernameTextField" focusColor="#0c80b2" layoutX="171.0" layoutY="367.0" prefHeight="26.0" prefWidth="300.0" promptText="Username" unFocusColor="#1797cf">
+                           <font>
+                              <Font name="Ubuntu" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="registerSceneEmailTextField" focusColor="#0c80b2" layoutX="171.0" layoutY="437.0" prefHeight="26.0" prefWidth="300.0" promptText="Email" unFocusColor="#1797cf">
+                           <font>
+                              <Font name="Ubuntu" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXPasswordField fx:id="registerScenePasswordField" focusColor="#0c80b2" layoutX="171.0" layoutY="507.0" prefHeight="26.0" prefWidth="300.0" promptText="Password" unFocusColor="#1797cf">
+                           <font>
+                              <Font name="Ubuntu" size="14.0" />
+                           </font>
+                        </JFXPasswordField>
+                        <JFXButton fx:id="loginSceneLoginButton" layoutX="171.0" layoutY="583.0" onAction="#register" prefHeight="43.0" prefWidth="300.0" style="-fx-background-color: #1797cf;;" text="register" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <Text id="registerSceneFilmGuide" fill="#1797cf" layoutX="171.0" layoutY="287.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="film guide" textAlignment="CENTER" wrappingWidth="299.9999761581421">
+                           <effect>
+                              <DropShadow height="5.82" radius="0.9550000000000001" width="0.0" />
+                           </effect>
+                           <font>
+                              <Font name="Ubuntu Bold" size="36.0" />
+                           </font>
+                        </Text>
+                        <Text id="login_scene_account_text" layoutX="238.0" layoutY="657.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Have an account?">
+                           <font>
+                              <Font name="Ubuntu" size="14.0" />
+                           </font>
+                        </Text>
+                        <Hyperlink id="loginSceneRegisterHyperlink" fx:id="registerSceneLoginLink" layoutX="348.0" layoutY="640.0" onAction="#goToLogin" text="Login">
+                           <font>
+                              <Font name="Ubuntu" size="14.0" />
+                           </font>
+                        </Hyperlink>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </AnchorPane>
+               </children>
+          </AnchorPane>
+        </children>
+      </VBox>
+   </children>
+</StackPane>
