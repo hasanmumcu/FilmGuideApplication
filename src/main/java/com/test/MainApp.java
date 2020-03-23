@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 
 public class MainApp extends Application {
 
+    public static final String baseURL = "http://localhost:8080";
     Stage window;
 
     private static final Logger log = LoggerFactory.getLogger(MainApp.class);
