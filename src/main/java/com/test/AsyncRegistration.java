@@ -14,7 +14,6 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
 import javafx.concurrent.Task;
-import javafx.scene.paint.Paint;
 
 public class AsyncRegistration extends Task<List<Object>>{
 
@@ -62,14 +61,14 @@ public class AsyncRegistration extends Task<List<Object>>{
             }
             else{
                 returnValues.add(false);
-                returnValues.add("Unexpected errors occured!");
+                returnValues.add("Unexpected error occured!");
                 return returnValues;
             }
         }
         catch(Exception ex){
             System.out.println(ex.getMessage());
             returnValues.add(false);
-            returnValues.add("Unexpected errors occured!");
+            returnValues.add("Connection could not be established!");
             return returnValues;
         }
         finally{

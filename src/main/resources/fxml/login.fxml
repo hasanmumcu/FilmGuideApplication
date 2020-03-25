@@ -50,7 +50,7 @@
                               <Font name="Ubuntu" size="14.0" />
                            </font>
                         </JFXPasswordField>
-                        <JFXButton fx:id="loginSceneLoginButton" layoutX="171.0" layoutY="554.0" onAction="#test" prefHeight="43.0" prefWidth="300.0" style="-fx-background-color: #1797cf;;" text="login" textAlignment="CENTER" textFill="WHITE">
+                        <JFXButton fx:id="loginSceneLoginButton" layoutX="171.0" layoutY="554.0" prefHeight="43.0" prefWidth="300.0" style="-fx-background-color: #1797cf;;" text="login" textAlignment="CENTER" textFill="WHITE">
                            <font>
                               <Font name="Ubuntu" size="16.0" />
                            </font>

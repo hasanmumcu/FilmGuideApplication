@@ -41,22 +41,22 @@
                               <Font name="Ubuntu" size="36.0" />
                            </font>
                         </Text>
-                        <JFXTextField fx:id="registerSceneUsernameTextField" focusColor="#0c80b2" layoutX="171.0" layoutY="437.0" prefHeight="26.0" prefWidth="300.0" promptText="Username" unFocusColor="#1797cf">
+                        <JFXTextField fx:id="registerSceneUsernameTextField" focusColor="#0c80b2" layoutX="171.0" layoutY="410.0" prefHeight="26.0" prefWidth="300.0" promptText="Username" unFocusColor="#1797cf">
                            <font>
                               <Font name="Ubuntu" size="14.0" />
                            </font>
                         </JFXTextField>
-                        <JFXTextField fx:id="registerSceneEmailTextField" focusColor="#0c80b2" layoutX="171.0" layoutY="507.0" prefHeight="26.0" prefWidth="300.0" promptText="Email" unFocusColor="#1797cf">
+                        <JFXTextField fx:id="registerSceneEmailTextField" focusColor="#0c80b2" layoutX="171.0" layoutY="480.0" prefHeight="26.0" prefWidth="300.0" promptText="Email" unFocusColor="#1797cf">
                            <font>
                               <Font name="Ubuntu" size="14.0" />
                            </font>
                         </JFXTextField>
-                        <JFXPasswordField fx:id="registerScenePasswordField" focusColor="#0c80b2" layoutX="171.0" layoutY="577.0" prefHeight="26.0" prefWidth="300.0" promptText="Password" unFocusColor="#1797cf">
+                        <JFXPasswordField fx:id="registerScenePasswordField" focusColor="#0c80b2" layoutX="171.0" layoutY="550.0" prefHeight="26.0" prefWidth="300.0" promptText="Password" unFocusColor="#1797cf">
                            <font>
                               <Font name="Ubuntu" size="14.0" />
                            </font>
                         </JFXPasswordField>
-                        <JFXButton fx:id="registerSceneRegisterButton" layoutX="171.0" layoutY="653.0" onAction="#register" prefHeight="43.0" prefWidth="300.0" style="-fx-background-color: #1797cf;;" text="register" textAlignment="CENTER" textFill="WHITE">
+                        <JFXButton fx:id="registerSceneRegisterButton" layoutX="171.0" layoutY="626.0" onAction="#register" prefHeight="43.0" prefWidth="300.0" style="-fx-background-color: #1797cf;;" text="register" textAlignment="CENTER" textFill="WHITE">
                            <font>
                               <Font name="Ubuntu" size="16.0" />
                            </font>
@@ -69,17 +69,17 @@
                               <Font name="Ubuntu Bold" size="36.0" />
                            </font>
                         </Text>
-                        <Text id="login_scene_account_text" layoutX="238.0" layoutY="727.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Have an account?">
+                        <Text id="login_scene_account_text" layoutX="238.0" layoutY="700.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Have an account?">
                            <font>
                               <Font name="Ubuntu" size="14.0" />
                            </font>
                         </Text>
-                        <Hyperlink id="loginSceneRegisterHyperlink" fx:id="registerSceneLoginLink" layoutX="348.0" layoutY="710.0" onAction="#goToLogin" text="Login">
+                        <Hyperlink id="loginSceneRegisterHyperlink" fx:id="registerSceneLoginLink" layoutX="348.0" layoutY="683.0" onAction="#goToLogin" text="Login">
                            <font>
                               <Font name="Ubuntu" size="14.0" />
                            </font>
                         </Hyperlink>
-                        <Label fx:id="registerStatusLabel" alignment="CENTER" layoutX="171.0" layoutY="308.0" prefHeight="84.0" prefWidth="300.0" textFill="#25bf1a" textOverrun="CLIP" visible="false">
+                        <Label fx:id="registerStatusLabel" alignment="CENTER" layoutX="171.0" layoutY="322.0" prefHeight="43.0" prefWidth="300.0" textFill="#25bf1a" textOverrun="CLIP" visible="false">
                            <font>
                               <Font name="Ubuntu" size="16.0" />
                            </font>

@@ -12,7 +12,9 @@ import javafx.stage.Stage;
 public class MainApp extends Application {
 
     public static final String baseURL = "http://localhost:8080";
-    Stage window;
+    
+    public static final int windowWidth = 1600;
+    public static final int windowHeight = 900;
 
     private static final Logger log = LoggerFactory.getLogger(MainApp.class);
 
@@ -22,8 +24,6 @@ public class MainApp extends Application {
 
     public void start(Stage stage) throws Exception {
 
-        window = stage;
-
         log.info("Starting Hello JavaFX and Maven demonstration application");
 
         String fxmlFile = "/fxml/login.fxml";
@@ -32,10 +32,11 @@ public class MainApp extends Application {
         Parent rootNode = (Parent) loader.load(getClass().getResourceAsStream(fxmlFile));
 
         log.debug("Showing JFX scene");
-        Scene scene = new Scene(rootNode, 1600, 900);
+        Scene scene = new Scene(rootNode, windowWidth, windowHeight);
         scene.getStylesheets().add("/styles/styles.css");
-
+        
         stage.setTitle("Film Guide");
+        stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
     }

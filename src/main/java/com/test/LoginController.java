@@ -8,8 +8,11 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
@@ -27,15 +30,27 @@ public class LoginController{
     @FXML private VBox mainVbox;
 
     @FXML
-    public void test(){
-        System.out.println(loginSceneUsernameTextField.getText() + " " + loginScenePasswordField.getText());
-    }
-
-    @FXML
     public void goToRegister(ActionEvent event) throws Exception {               
         
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/register.fxml"));
         Scene scene = loginSceneLoginButton.getScene();
+
+        FXMLLoader loader = new FXMLLoader();
+        loader.setBuilderFactory(new JavaFXBuilderFactory());
+        loader.setLocation(getClass().getResource("/fxml/register.fxml"));
+
+        Parent root = loader.load();
+        final RegisterController registerController = loader.getController();
+
+        root.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            public void handle(KeyEvent event) {
+                if(event.getCode() == KeyCode.ENTER){
+                    registerController.register();
+                }
+                else if(event.getCode() == KeyCode.ESCAPE){
+                    registerController.goToLogin();
+                }
+            }
+        });
 
         root.translateYProperty().set(scene.getHeight());
         parentContainer.getChildren().add(root);
