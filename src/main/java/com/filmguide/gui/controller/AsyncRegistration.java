@@ -39,6 +39,7 @@ public class AsyncRegistration extends Task<List<Object>>{
         requestBody.addProperty("username", this.registration.getUsername());
         requestBody.addProperty("email", this.registration.getEmail());
         requestBody.addProperty("password", this.registration.getPassword());
+        requestBody.addProperty("recaptchaToken", this.registration.getToken());
         
         try{
             request.setEntity(new StringEntity(requestBody.toString()));
