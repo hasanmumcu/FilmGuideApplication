@@ -37,7 +37,7 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 
-import com.filmguide.MainApp;
+import com.filmguide.Config;
 import com.sun.webkit.WebPage;
 import netscape.javascript.JSObject;
 
@@ -70,7 +70,7 @@ public class RegisterController implements Initializable {
             }
         });
         
-        webEngine.load(MainApp.baseURL + "/recaptcha.html");
+        webEngine.load(Config.baseURL + "/recaptcha.html");
 
         try {
             
@@ -107,7 +107,7 @@ public class RegisterController implements Initializable {
         String email = registerSceneEmailTextField.getText();
         String password = registerScenePasswordField.getText();
 
-        if(!MainApp.usernamePattern.matcher(username).matches()){
+        if(!Config.usernamePattern.matcher(username).matches()){
             registerStatusLabel.setText("Invalid username!");
             registerStatusLabel.setTextFill(Paint.valueOf("#DD2B2B"));
             registerStatusLabel.setVisible(true);
@@ -115,7 +115,7 @@ public class RegisterController implements Initializable {
             return;
         }
 
-        if(!MainApp.passwordPattern.matcher(password).matches()){
+        if(!Config.passwordPattern.matcher(password).matches()){
             registerStatusLabel.setText("Invalid password! Minimum six characters, at least one letter and one number.");
             registerStatusLabel.setTextFill(Paint.valueOf("#DD2B2B"));
             registerStatusLabel.setVisible(true);
@@ -123,7 +123,7 @@ public class RegisterController implements Initializable {
             return;
         }
 
-        if(!MainApp.emailPattern.matcher(email).matches()){
+        if(!Config.emailPattern.matcher(email).matches()){
             registerStatusLabel.setText("Invalid email!");
             registerStatusLabel.setTextFill(Paint.valueOf("#DD2B2B"));
             registerStatusLabel.setVisible(true);
@@ -192,7 +192,7 @@ public class RegisterController implements Initializable {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
 
-            root.translateYProperty().set(MainApp.windowHeight * -1);
+            root.translateYProperty().set(Config.windowHeight * -1);
             parentContainer.getChildren().add(root);
 
             Timeline timeline = new Timeline();

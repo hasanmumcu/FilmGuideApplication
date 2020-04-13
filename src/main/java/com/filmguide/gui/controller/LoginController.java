@@ -66,12 +66,6 @@ public class LoginController{
         });
         timeline.getKeyFrames().add(kf);
         timeline.play();
-        /*Parent registerParent = FXMLLoader.load(getClass().getResource("/fxml/register.fxml"));
-        Scene registerScene = new Scene(registerParent);
-
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(registerScene);
-        window.show();*/
     }
 
 }

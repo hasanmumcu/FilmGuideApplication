@@ -13,15 +13,7 @@ import javafx.stage.Stage;
 
 public class MainApp extends Application {
 
-    public static final String baseURL = "http://localhost:8080";
-    
-    public static final int windowWidth = 1600;
-    public static final int windowHeight = 900;
-    public static final Pattern usernamePattern = Pattern.compile("^[a-zA-Z0-9]{5,15}$");
-    public static final Pattern passwordPattern = Pattern.compile("^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{6,}$");
-    public static final Pattern emailPattern = Pattern.compile("^[a-zA-Z0-9_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$");
 
-    private static final Logger log = LoggerFactory.getLogger(MainApp.class);
 
     public static void main(String[] args) throws Exception {
         launch(args);
@@ -30,15 +22,15 @@ public class MainApp extends Application {
     public void start(Stage stage) throws Exception {
 
 
-        log.info("Starting Hello JavaFX and Maven demonstration application");
+        Config.log.info("Starting Filmguide Application");
 
         String fxmlFile = "/fxml/login.fxml";
-        log.debug("Loading FXML for main view from: {}", fxmlFile);
+        Config.log.debug("Loading FXML for main view from: {}", fxmlFile);
         FXMLLoader loader = new FXMLLoader();
         Parent rootNode = (Parent) loader.load(getClass().getResourceAsStream(fxmlFile));
 
-        log.debug("Showing JFX scene");
-        Scene scene = new Scene(rootNode, windowWidth, windowHeight);
+        Config.log.debug("Showing JFX scene");
+        Scene scene = new Scene(rootNode, Config.windowWidth, Config.windowHeight);
         scene.getStylesheets().add("/styles/styles.css");
         
         stage.setTitle("Film Guide");

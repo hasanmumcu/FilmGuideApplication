@@ -16,7 +16,7 @@ import org.apache.http.util.EntityUtils;
 
 import javafx.concurrent.Task;
 
-import com.filmguide.MainApp;
+import com.filmguide.Config;
 
 public class AsyncRegistration extends Task<List<Object>>{
 
@@ -32,7 +32,7 @@ public class AsyncRegistration extends Task<List<Object>>{
         
         List<Object> returnValues = new ArrayList<Object>();
 
-        HttpPost request = new HttpPost(MainApp.baseURL + "/auth/register");
+        HttpPost request = new HttpPost(Config.baseURL + "/auth/register");
         request.addHeader("Content-Type", "application/json");
         
         JsonObject requestBody = new JsonObject();
