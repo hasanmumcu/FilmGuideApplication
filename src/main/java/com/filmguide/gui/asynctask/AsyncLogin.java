@@ -1,4 +1,4 @@
-package com.filmguide.gui.controller;
+package com.filmguide.gui.asynctask;
 
 import java.io.FileOutputStream;
 import java.io.IOException;

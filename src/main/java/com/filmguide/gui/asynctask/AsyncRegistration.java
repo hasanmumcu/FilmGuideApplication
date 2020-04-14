@@ -1,4 +1,4 @@
-package com.filmguide.gui.controller;
+package com.filmguide.gui.asynctask;
 
 import java.util.ArrayList;
 import java.util.List;
