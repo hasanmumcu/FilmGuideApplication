@@ -16,9 +16,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Cursor;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Paint;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.util.Duration;
@@ -28,7 +29,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.regex.Matcher;
 
 import javax.swing.SwingUtilities;
 
@@ -83,8 +83,21 @@ public class RegisterController implements Initializable {
 				}
             });
         } catch ( Exception e ) {
-            e.printStackTrace();
+            Config.log.info(e.getMessage());
         }
+
+        Parent root = this.registerSceneEmailTextField.getParent();
+        final RegisterController controller = this;
+
+        root.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            public void handle(KeyEvent event) {
+                if (event.getCode() == KeyCode.ENTER) {
+                    controller.register();
+                } else if (event.getCode() == KeyCode.ESCAPE) {
+                    controller.goToLogin();
+                }
+            }
+        });
     }
 
     @FXML
@@ -109,7 +122,7 @@ public class RegisterController implements Initializable {
 
         if(!Config.usernamePattern.matcher(username).matches()){
             registerStatusLabel.setText("Invalid username!");
-            registerStatusLabel.setTextFill(Paint.valueOf("#DD2B2B"));
+            registerStatusLabel.setTextFill(Config.ErrorTextColor);
             registerStatusLabel.setVisible(true);
             registerSceneUsernameTextField.setText("");
             return;
@@ -117,7 +130,7 @@ public class RegisterController implements Initializable {
 
         if(!Config.passwordPattern.matcher(password).matches()){
             registerStatusLabel.setText("Invalid password! Minimum six characters, at least one letter and one number.");
-            registerStatusLabel.setTextFill(Paint.valueOf("#DD2B2B"));
+            registerStatusLabel.setTextFill(Config.ErrorTextColor);
             registerStatusLabel.setVisible(true);
             registerScenePasswordField.setText("");
             return;
@@ -125,7 +138,7 @@ public class RegisterController implements Initializable {
 
         if(!Config.emailPattern.matcher(email).matches()){
             registerStatusLabel.setText("Invalid email!");
-            registerStatusLabel.setTextFill(Paint.valueOf("#DD2B2B"));
+            registerStatusLabel.setTextFill(Config.ErrorTextColor);
             registerStatusLabel.setVisible(true);
             registerSceneEmailTextField.setText("");
             return;
@@ -133,7 +146,7 @@ public class RegisterController implements Initializable {
 
         if(token == null || token.equals("")){
             registerStatusLabel.setText("Are you human? I am not sure.");
-            registerStatusLabel.setTextFill(Paint.valueOf("#DD2B2B"));
+            registerStatusLabel.setTextFill(Config.ErrorTextColor);
             registerStatusLabel.setVisible(true);
             return;
         }
@@ -154,7 +167,7 @@ public class RegisterController implements Initializable {
             public void handle(WorkerStateEvent event) {
                 if ((Boolean) asyncRegistration.getValue().get(0) == true) {
                     registerStatusLabel.setText(asyncRegistration.getValue().get(1).toString());
-                    registerStatusLabel.setTextFill(Paint.valueOf("#25BF1A"));
+                    registerStatusLabel.setTextFill(Config.SuccessTextColor);
                     registerStatusLabel.setVisible(true);
                     registerSceneUsernameTextField.setText("");
                     registerScenePasswordField.setText("");
@@ -162,7 +175,7 @@ public class RegisterController implements Initializable {
                     webView.getEngine().reload();
                 } else {
                     registerStatusLabel.setText(asyncRegistration.getValue().get(1).toString());
-                    registerStatusLabel.setTextFill(Paint.valueOf("#DD2B2B"));
+                    registerStatusLabel.setTextFill(Config.ErrorTextColor);
                     registerStatusLabel.setVisible(true);
                     registerSceneUsernameTextField.setText("");
                     registerScenePasswordField.setText("");
@@ -207,10 +220,12 @@ public class RegisterController implements Initializable {
             timeline.getKeyFrames().add(kf);
             timeline.play();
         } catch (Exception ex) {
-            System.out.println("Excetion message: " + ex.getMessage());
+            System.out.println("Exception message: " + ex.getMessage());
         }
     }
 
+
+    /* This class is used by javascript. */
     public class JavaScriptBridge{
 
         private WebView webView;

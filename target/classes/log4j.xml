@@ -10,7 +10,7 @@
         </layout>
     </appender>
 
-    <logger name="com.test">
+    <logger name="com.filmguide">
         <level value="DEBUG"/>
     </logger>
 

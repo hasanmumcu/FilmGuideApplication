@@ -34,7 +34,7 @@
                               <Image url="@../images/logo.png" />
                            </image>
                         </ImageView>
-                        <Text id="registerSceneRegister" fill="#1797cf" layoutX="167.0" layoutY="237.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="register to the" textAlignment="CENTER" wrappingWidth="299.9999761581421">
+                        <Text id="registerSceneRegister" fill="#171717" layoutX="167.0" layoutY="237.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="register to the" textAlignment="CENTER" wrappingWidth="299.9999761581421">
                            <effect>
                               <DropShadow height="5.82" radius="0.9550000000000001" width="0.0" />
                            </effect>
@@ -42,27 +42,27 @@
                               <Font name="Ubuntu" size="36.0" />
                            </font>
                         </Text>
-                        <JFXTextField fx:id="registerSceneUsernameTextField" focusColor="#0c80b2" layoutX="167.0" layoutY="386.0" prefHeight="26.0" prefWidth="300.0" promptText="Username" unFocusColor="#1797cf">
+                        <JFXTextField fx:id="registerSceneUsernameTextField" focusColor="#0c80b2" layoutX="167.0" layoutY="386.0" prefHeight="26.0" prefWidth="300.0" promptText="Username" unFocusColor="#171717">
                            <font>
                               <Font name="Ubuntu" size="14.0" />
                            </font>
                         </JFXTextField>
-                        <JFXTextField fx:id="registerSceneEmailTextField" focusColor="#0c80b2" layoutX="167.0" layoutY="456.0" prefHeight="26.0" prefWidth="300.0" promptText="Email" unFocusColor="#1797cf">
+                        <JFXTextField fx:id="registerSceneEmailTextField" focusColor="#0c80b2" layoutX="167.0" layoutY="456.0" prefHeight="26.0" prefWidth="300.0" promptText="Email" unFocusColor="#171717">
                            <font>
                               <Font name="Ubuntu" size="14.0" />
                            </font>
                         </JFXTextField>
-                        <JFXPasswordField fx:id="registerScenePasswordField" focusColor="#0c80b2" layoutX="167.0" layoutY="526.0" prefHeight="26.0" prefWidth="300.0" promptText="Password" unFocusColor="#1797cf">
+                        <JFXPasswordField fx:id="registerScenePasswordField" focusColor="#0c80b2" layoutX="167.0" layoutY="526.0" prefHeight="26.0" prefWidth="300.0" promptText="Password" unFocusColor="#171717">
                            <font>
                               <Font name="Ubuntu" size="14.0" />
                            </font>
                         </JFXPasswordField>
-                        <JFXButton fx:id="registerSceneRegisterButton" layoutX="167.0" layoutY="680.0" onAction="#register" prefHeight="43.0" prefWidth="300.0" style="-fx-background-color: #1797cf;;" text="register" textAlignment="CENTER" textFill="WHITE">
+                        <JFXButton fx:id="registerSceneRegisterButton" layoutX="167.0" layoutY="680.0" onAction="#register" prefHeight="43.0" prefWidth="300.0" style="-fx-background-color: #171717;" text="register" textAlignment="CENTER" textFill="WHITE">
                            <font>
                               <Font name="Ubuntu" size="16.0" />
                            </font>
                         </JFXButton>
-                        <Text id="registerSceneFilmGuide" fill="#1797cf" layoutX="167.0" layoutY="277.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="film guide" textAlignment="CENTER" wrappingWidth="299.9999761581421">
+                        <Text id="registerSceneFilmGuide" fill="#171717" layoutX="167.0" layoutY="277.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="film guide" textAlignment="CENTER" wrappingWidth="299.9999761581421">
                            <effect>
                               <DropShadow height="5.82" radius="0.9550000000000001" width="0.0" />
                            </effect>

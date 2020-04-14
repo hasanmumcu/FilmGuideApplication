@@ -12,14 +12,14 @@
 
 <VBox fx:id="sidePanelVbox" accessibleText="sidePanelVbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="230.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.filmguide.gui.controller.SidePanelController">
    <children>
-      <AnchorPane fx:id="anchorPane" accessibleText="anchorPane" prefHeight="900.0" prefWidth="230.0" style="-fx-background-color: #004e75; -fx-background-color: linear-gradient(from 10% 10% to 90% 90%,  #ffffff, #004e75);">
+      <AnchorPane fx:id="anchorPane" accessibleText="anchorPane" prefHeight="900.0" prefWidth="230.0" style="-fx-background-color: #363638; -fx-background-color: linear-gradient(from 10% 10% to 90% 90%,  #363638, #000000);">
          <children>
-            <ImageView fitHeight="105.0" fitWidth="136.0" layoutX="37.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="105.0" fitWidth="136.0" layoutX="63.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/logo.png" />
+                  <Image url="@../images/inverted_logo.png" />
                </image>
             </ImageView>
-            <AnchorPane layoutX="180.0" prefHeight="900.0" prefWidth="50.0" style="-fx-background-color: #004e7510;">
+            <AnchorPane layoutX="180.0" prefHeight="900.0" prefWidth="50.0" style="-fx-background-color: #90939600;">
                <children>
                   <JFXHamburger fx:id="hamburgerButton" accessibleRole="PAGE_ITEM" accessibleText="HamburgerButton" layoutX="10.0" layoutY="16.0" />
                </children>
@@ -27,7 +27,7 @@
                   <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0" />
                </effect>
             </AnchorPane>
-            <JFXButton fx:id="profileButton" alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="70.0" layoutY="174.0" prefHeight="40.0" prefWidth="230.0" ripplerFill="WHITE" style="-fx-background-color: #0481bf70;" text="profile" textAlignment="CENTER" textFill="WHITE">
+            <JFXButton fx:id="profileButton" alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="46.0" layoutY="174.0" prefHeight="40.0" prefWidth="230.0" ripplerFill="WHITE" style="-fx-background-color: #4c4c4f;" text="profile" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Ubuntu Mono" size="18.0" />
                </font>
@@ -42,7 +42,7 @@
                   <DropShadow />
                </effect>
             </JFXButton>
-            <JFXButton fx:id="searchButton" alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="78.0" layoutY="222.0" prefHeight="40.0" prefWidth="230.0" ripplerFill="WHITE" style="-fx-background-color: #0481bf70;" text="search" textAlignment="CENTER" textFill="WHITE">
+            <JFXButton fx:id="searchButton" alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="52.0" layoutY="222.0" prefHeight="40.0" prefWidth="230.0" ripplerFill="WHITE" style="-fx-background-color: #4c4c4f;" text="search" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Ubuntu Mono" size="18.0" />
                </font>
@@ -57,7 +57,7 @@
                   <DropShadow />
                </effect>
             </JFXButton>
-            <JFXButton fx:id="quitButton" alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="87.0" layoutY="811.0" prefHeight="40.0" prefWidth="230.0" ripplerFill="WHITE" style="-fx-background-color: #0481bf70;" text="quit" textAlignment="CENTER" textFill="WHITE">
+            <JFXButton fx:id="quitButton" alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="60.0" layoutY="811.0" onAction="#quit" prefHeight="40.0" prefWidth="230.0" ripplerFill="WHITE" style="-fx-background-color: #4c4c4f;" text="quit" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Ubuntu Mono" size="18.0" />
                </font>
@@ -72,7 +72,7 @@
                   <DropShadow />
                </effect>
             </JFXButton>
-            <JFXButton fx:id="logoutButton" alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="78.0" layoutY="763.0" prefHeight="40.0" prefWidth="230.0" ripplerFill="WHITE" style="-fx-background-color: #0481bf70;" text="logout" textAlignment="CENTER" textFill="WHITE">
+            <JFXButton fx:id="logoutButton" alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="50.0" layoutY="763.0" onAction="#logout" prefHeight="40.0" prefWidth="230.0" ripplerFill="WHITE" style="-fx-background-color: #4c4c4f;" text="logout" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Ubuntu Mono" size="18.0" />
                </font>

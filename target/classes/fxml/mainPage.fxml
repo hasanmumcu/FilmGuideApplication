@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXDrawer?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox fx:id="mainVbox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.filmguide.gui.controller.MainPageController">
+<StackPane fx:id="parentContainer" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.filmguide.gui.controller.MainPageController">
    <children>
-      <AnchorPane prefHeight="900.0" prefWidth="1599.0">
+      <VBox fx:id="mainVbox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="900.0" prefWidth="1600.0">
          <children>
-            <JFXDrawer fx:id="sidePanel" defaultDrawerSize="150.0" prefHeight="900.0" prefWidth="170.0" />
+            <AnchorPane prefHeight="900.0" prefWidth="1599.0">
+               <children>
+                  <ImageView fitHeight="900.0" fitWidth="1600.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/images/background_main_page.jpg" />
+                     </image>
+                  </ImageView>
+                  <JFXDrawer fx:id="sidePanel" defaultDrawerSize="150.0" overLayVisible="false" prefHeight="900.0" prefWidth="170.0" />
+                  <AnchorPane fx:id="film1" layoutX="85.0" layoutY="43.0" prefHeight="400.0" prefWidth="300.0" />
+               </children>
+            </AnchorPane>
          </children>
-      </AnchorPane>
+      </VBox>
    </children>
-</VBox>
+</StackPane>

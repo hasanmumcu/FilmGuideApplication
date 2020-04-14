@@ -5,6 +5,7 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -32,7 +33,7 @@
                               <Image url="/images/logo.png" />
                            </image>
                         </ImageView>
-                        <Text id="login_scene_welcome" fill="#1797cf" layoutX="171.0" layoutY="261.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="welcome to the" textAlignment="CENTER" wrappingWidth="299.9999761581421">
+                        <Text id="login_scene_welcome" fill="#171717" layoutX="171.0" layoutY="322.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="welcome to the" textAlignment="CENTER" wrappingWidth="299.9999761581421">
                            <effect>
                               <DropShadow height="5.82" radius="0.9550000000000001" width="0.0" />
                            </effect>
@@ -40,22 +41,22 @@
                               <Font name="Ubuntu" size="36.0" />
                            </font>
                         </Text>
-                        <JFXTextField fx:id="loginSceneUsernameTextField" focusColor="#0c80b2" layoutX="171.0" layoutY="412.0" prefHeight="26.0" prefWidth="300.0" promptText="Username" unFocusColor="#1797cf">
+                        <JFXTextField fx:id="loginSceneUsernameTextField" focusColor="#0c80b2" layoutX="171.0" layoutY="473.0" prefHeight="26.0" prefWidth="300.0" promptText="Username" unFocusColor="#171717">
                            <font>
                               <Font name="Ubuntu" size="14.0" />
                            </font>
                         </JFXTextField>
-                        <JFXPasswordField fx:id="loginScenePasswordField" focusColor="#0c80b2" layoutX="171.0" layoutY="478.0" prefHeight="26.0" prefWidth="300.0" promptText="Password" unFocusColor="#1797cf">
+                        <JFXPasswordField fx:id="loginScenePasswordField" focusColor="#0c80b2" layoutX="171.0" layoutY="539.0" prefHeight="26.0" prefWidth="300.0" promptText="Password" unFocusColor="#171717">
                            <font>
                               <Font name="Ubuntu" size="14.0" />
                            </font>
                         </JFXPasswordField>
-                        <JFXButton fx:id="loginSceneLoginButton" layoutX="171.0" layoutY="554.0" prefHeight="43.0" prefWidth="300.0" style="-fx-background-color: #1797cf;;" text="login" textAlignment="CENTER" textFill="WHITE">
+                        <JFXButton fx:id="loginSceneLoginButton" layoutX="171.0" layoutY="615.0" onAction="#login" prefHeight="43.0" prefWidth="300.0" style="-fx-background-color: #171717;" text="login" textAlignment="CENTER" textFill="WHITE">
                            <font>
                               <Font name="Ubuntu" size="16.0" />
                            </font>
                         </JFXButton>
-                        <Text id="login_scene_film_guide" fill="#1797cf" layoutX="171.0" layoutY="301.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="film guide" textAlignment="CENTER" wrappingWidth="299.9999761581421">
+                        <Text id="login_scene_film_guide" fill="#171717" layoutX="171.0" layoutY="362.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="film guide" textAlignment="CENTER" wrappingWidth="299.9999761581421">
                            <effect>
                               <DropShadow height="5.82" radius="0.9550000000000001" width="0.0" />
                            </effect>
@@ -63,16 +64,21 @@
                               <Font name="Ubuntu Bold" size="36.0" />
                            </font>
                         </Text>
-                        <Text id="login_scene_account_text" layoutX="204.0" layoutY="633.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do not have an account?">
+                        <Text id="login_scene_account_text" layoutX="204.0" layoutY="694.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do not have an account?">
                            <font>
                               <Font name="Ubuntu" size="14.0" />
                            </font>
                         </Text>
-                        <Hyperlink id="loginSceneRegisterHyperlink" layoutX="360.0" layoutY="616.0" onAction="#goToRegister" text="Register">
+                        <Hyperlink id="loginSceneRegisterHyperlink" layoutX="360.0" layoutY="677.0" onAction="#goToRegister" text="Register">
                            <font>
                               <Font name="Ubuntu" size="14.0" />
                            </font>
                         </Hyperlink>
+                        <Label fx:id="loginStatusLabel" alignment="CENTER" layoutX="4.0" layoutY="401.0" prefHeight="43.0" prefWidth="633.0" textFill="#25bf1a" textOverrun="CLIP" visible="false">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
                      </children>
                      <opaqueInsets>
                         <Insets />
