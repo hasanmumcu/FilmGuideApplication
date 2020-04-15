@@ -28,6 +28,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import com.filmguide.Config;
+import com.filmguide.gui.asynctask.AsyncLogin;
 import com.filmguide.model.user.User;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;

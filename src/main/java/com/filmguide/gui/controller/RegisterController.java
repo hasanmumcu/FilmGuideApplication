@@ -38,6 +38,7 @@ import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 
 import com.filmguide.Config;
+import com.filmguide.gui.asynctask.AsyncRegistration;
 import com.sun.webkit.WebPage;
 import netscape.javascript.JSObject;
 
@@ -152,7 +153,6 @@ public class RegisterController implements Initializable {
         }
 
         final AsyncRegistration asyncRegistration = new AsyncRegistration(new Registration(username, password, email, token));
-        // registerStatusLabel.textProperty().bind(asyncRegistration.messageProperty());
 
         asyncRegistration.setOnRunning(new EventHandler<WorkerStateEvent>() {
 

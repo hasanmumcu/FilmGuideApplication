@@ -5,13 +5,11 @@ import java.util.ResourceBundle;
 
 import javafx.fxml.Initializable;
 
-public class ProfileController implements Initializable {
-
-   
+public class FilmController implements Initializable {
 
     public void initialize(URL location, ResourceBundle resources) {
         // TODO Auto-generated method stub
 
     }
-    
+
 }

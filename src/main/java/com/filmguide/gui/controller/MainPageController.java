@@ -22,14 +22,10 @@ import javafx.scene.layout.VBox;
 
 public class MainPageController implements Initializable {
 
-    @FXML
-    private VBox mainVbox;
-    @FXML
-    private StackPane parentContainer;
-    @FXML
-    private JFXDrawer sidePanel;
-    @FXML
-    private AnchorPane film1;
+    @FXML private VBox mainVbox;
+    @FXML private StackPane parentContainer;
+    @FXML private JFXDrawer sidePanel;
+    @FXML private AnchorPane film1;
 
     private boolean sidePanelOpen = false;
 
@@ -52,7 +48,6 @@ public class MainPageController implements Initializable {
                             sidePanel.toggle();
                             if(!sidePanelOpen) sidePanel.toFront();
                             sidePanelOpen = !sidePanelOpen;
-                        
                         }
                     });
             sidePanel.setOnDrawerOpening(new EventHandler<JFXDrawerEvent>() {
@@ -85,9 +80,7 @@ public class MainPageController implements Initializable {
             loader.setBuilderFactory(new JavaFXBuilderFactory());
             loader.setLocation(getClass().getResource("/fxml/filmCard.fxml"));
             film1.getChildren().add((Node) loader.load());
-       
-           
-
+    
         }catch(IOException ex){
             System.out.println("Exception: " + ex.getMessage());
         }   

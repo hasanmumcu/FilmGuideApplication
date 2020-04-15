@@ -1,6 +1,6 @@
 package com.filmguide.model.credit;
 
-public abstract class Credit {
+public abstract class Credit implements ICredit{
 
     private String creditId;
     private String character;

@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.filmguide.model.Genre;
 
-public abstract class Show {
+public abstract class Show implements IShow{
 
     private String backdropPath;
     private int id; 
